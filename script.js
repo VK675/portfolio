@@ -92,6 +92,17 @@ const PROJECTS = [
     github: "https://github.com/VK675/Yummly",
     demo: "",
   },
+  {
+     title: "PipiLabu",
+    category: "English learning app for kids",
+    stack: "Electron 42, Js, HTML, CSS3, Oillama",
+    image: "img/Pipilabu.png",
+    cover: "linear-gradient(135deg, #6b3a10, #4a1a5e)",
+    status: "In progress",
+    github: "https://github.com/VK675/PiPiLaBu",
+    demo: "",
+
+  }
 ];
 
 // Icons: devicon (https://devicon.dev), self-hosted in /icons — `icon` is the file name without .svg.
