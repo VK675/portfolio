@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valerii Kravchenko — Student Developer</title>
+  <meta name="description" content="Portfolio of Valerii Kravchenko, 16-year-old Ukrainian, student-developer based in Torres Vedras, Portugal." />
+  <meta name="theme-color" content="#0b080c" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="glow-circle" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#top" class="brand" aria-label="Valerii Kravchenko — home"><img src="logo.svg" alt="" width="70" height="90" /></a>
+    <a href="#" class="header-mail" data-email></a>
+    <nav>
+      <a href="#skills" class="hover-link"><span data-text="SKILLS">SKILLS</span></a>
+      <a href="#work" class="hover-link"><span data-text="WORK">WORK</span></a>
+      <a href="#contact" class="hover-link"><span data-text="CONTACT">CONTACT</span></a>
+    </nav>
+  </header>
+
+  <!-- FIXED SOCIALS -->
+  <aside class="socials" id="socials"></aside>
+  <a href="#contact" class="hire-btn">Looking for internship <span>↗</span></a>
+
+  <main id="top">
+    <!-- HERO: ID CARD -->
+    <section class="landing">
+      <div class="landing-intro">
+        <h2>Hello! I'm</h2>
+        <h1>VALERII<br />KRAVCHENKO</h1>
+        <p class="landing-sub">16-year-old Ukrainian, student based in Torres Vedras, Portugal.</p>
+        <div class="landing-actions">
+          <a href="#work" class="pill-btn">See my projects ↓</a>
+          <a href="#" class="ghost-btn" data-github target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="id-wrap">
+        <div class="id-back" aria-hidden="true">
+          <div class="id-back-logo">
+            <span class="id-cert">CERTIFIED</span>
+            <span class="id-script">Developer!</span>
+          </div>
+          <img class="id-mono" src="logo.svg" alt="" />
+        </div>
+
+        <article class="id-card" id="id-card" aria-label="Developer ID card">
+          <span class="id-shine" aria-hidden="true"></span>
+          <div class="id-grid">
+            <div class="id-left">
+              <div class="id-photo">
+                <img src="img/avatar.jpg" alt="Valerii Kravchenko" width="160" height="190" />
+              </div>
+              <div class="id-socials">
+                <a href="#" data-github target="_blank" rel="noopener"><span class="ico ico-gh"></span>@VK675</a>
+              </div>
+              <span class="id-bar" aria-hidden="true"></span>
+              <p class="id-slogan">STUDY, BUILD. REPEAT!</p>
+            </div>
+
+            <div class="id-right">
+              <div class="id-logo">
+                <span class="id-cert">CERTIFIED</span>
+                <span class="id-script">Developer!</span>
+              </div>
+              <dl class="id-fields">
+                <div><dd>Valerii Kravchenko</dd><dt>Name</dt></div>
+                <div><dd>Ukrainian <i class="flag flag-ua"></i></dd><dt>Nationality</dt></div>
+                <div><dd>Torres Vedras, PT</dd><dt>Based in</dt></div>
+                <div><dd>Student · Developer</dd><dt>Role</dt></div>
+              </dl>
+              <p class="id-since">CODING SINCE 2025</p>
+              <div class="id-icons" aria-hidden="true">
+                <span><img src="icons/javascript-plain.svg" alt="" /></span>
+                <span><img src="icons/csharp-plain.svg" alt="" /></span>
+                <span><img src="icons/kotlin-plain.svg" alt="" /></span>
+              </div>
+              <div class="id-barcode" aria-hidden="true"></div>
+              <p class="id-fine">HTML CSS JAVASCRIPT NODE.JS C# .NET KOTLIN FIREBASE SUPABASE</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK (horizontal scroll) -->
+    <section id="work" class="work">
+      <div class="work-sticky">
+        <div class="container">
+          <h2 class="section-title">My <span class="accent">Work</span></h2>
+        </div>
+        <div class="work-track" id="work-track"></div>
+      </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section class="whatido">
+      <div class="container whatido-flex">
+        <h2 class="whatido-title split-chars">W<span class="it">HAT</span><br />I <span class="accent">DO</span></h2>
+        <div class="what-boxes" id="what-boxes"></div>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section class="career">
+      <div class="container">
+        <h2 class="section-title split">My journey <span class="accent">&amp;</span><br />education</h2>
+        <div class="career-wrap">
+          <div class="career-line"><span class="career-dot"></span></div>
+          <div id="career-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title center split">My <span class="accent">Skills</span></h2>
+        <div class="skill-tabs" role="tablist">
+          <button role="tab" aria-selected="true" aria-controls="tab-hard" id="t-hard">Hard skills</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-soft" id="t-soft">Soft skills</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-lang" id="t-lang">Languages</button>
+        </div>
+
+        <div class="skill-panel" id="tab-hard" role="tabpanel" aria-labelledby="t-hard">
+          <div class="pyramid" id="pyramid"></div>
+        </div>
+        <div class="skill-panel" id="tab-soft" role="tabpanel" aria-labelledby="t-soft" hidden>
+          <div class="soft-grid" id="soft-grid"></div>
+        </div>
+        <div class="skill-panel" id="tab-lang" role="tabpanel" aria-labelledby="t-lang" hidden>
+          <div class="lang-list" id="lang-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="contact-title split">Let's build something <span class="accent">together.</span></h2>
+        <div class="contact-flex">
+          <div class="contact-box">
+            <h4>Email</h4>
+            <a href="#" data-email class="hover-underline"></a>
+            <h4>Location</h4>
+            <p>Torres Vedras, Portugal</p>
+          </div>
+          <div class="contact-box">
+            <h4>Social</h4>
+            <div id="contact-socials"></div>
+          </div>
+          <div class="contact-box contact-credit">
+            <p>Designed and developed<br />by <span class="accent">Valerii Kravchenko</span></p>
+            <p class="muted">© <span id="year"></span> · <a href="privacy.html" class="hover-underline">Privacy</a> · No cookies</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
