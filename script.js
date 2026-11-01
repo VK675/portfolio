@@ -29,6 +29,13 @@ const WHAT_I_DO = [
   },
 ];
 
+// Coding hours this week. Filled in by hand for now — later from WakaTime.
+const STATS = [
+  { label: "JavaScript", hours: 8 },
+  { label: "Kotlin", hours: 3 },
+  { label: "C#", hours: 1 },
+];
+
 const CAREER = [
   {
     role: "Full Stack Projects",
@@ -93,16 +100,15 @@ const PROJECTS = [
     demo: "",
   },
   {
-     title: "PipiLabu",
+    title: "PiPiLaBu",
     category: "English learning app for kids",
-    stack: "Electron 42, Js, HTML, CSS3, Oillama",
+    stack: "Electron, JavaScript, Ollama",
     image: "img/Pipilabu.png",
     cover: "linear-gradient(135deg, #6b3a10, #4a1a5e)",
     status: "In progress",
     github: "https://github.com/VK675/PiPiLaBu",
     demo: "",
-
-  }
+  },
 ];
 
 // Icons: devicon (https://devicon.dev), self-hosted in /icons — `icon` is the file name without .svg.
@@ -206,6 +212,14 @@ $("#what-boxes").innerHTML = WHAT_I_DO.map((w, i) => `
     </div></div>
   </div>`).join("");
 
+const maxHours = Math.max(...STATS.map((s) => s.hours));
+$("#stats-list").innerHTML = STATS.map((s) => `
+  <div class="stat-row">
+    <span class="stat-label">${s.label}</span>
+    <div class="stat-bar"><span style="width: ${(s.hours / maxHours) * 100}%"></span></div>
+    <span class="stat-hours">${s.hours}h</span>
+  </div>`).join("");
+
 $("#career-list").innerHTML = CAREER.map((c) => `
   <div class="career-item">
     <div class="career-left">
@@ -286,24 +300,6 @@ tabs.forEach((tab) => tab.addEventListener("click", () => {
 // ============================================================
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = matchMedia("(pointer: fine)").matches;
-
-// ---------- Custom cursor ----------
-if (finePointer && !reduceMotion) {
-  const cursor = $(".cursor");
-  let x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
-  addEventListener("mousemove", (e) => { x = e.clientX; y = e.clientY; });
-  (function loop() {
-    cx += (x - cx) * 0.18;
-    cy += (y - cy) * 0.18;
-    cursor.style.transform = `translate(${cx}px, ${cy}px)`;
-    requestAnimationFrame(loop);
-  })();
-  document.addEventListener("mouseover", (e) => {
-    cursor.classList.toggle("big", !!e.target.closest("a, button, .what-box, .work-box, .pyr-tile, .soft-card, .id-card"));
-  });
-} else {
-  $(".cursor").remove();
-}
 
 // ---------- Split text into words ----------
 $$(".split, .split-chars").forEach((el) => {
