@@ -1,6 +1,4 @@
-// ============================================================
-//  EDIT YOUR DATA HERE
-// ============================================================
+// Edit your data here
 const CONFIG = {
   githubUser: "VK675",
   github: "https://github.com/VK675",
@@ -29,19 +27,12 @@ const WHAT_I_DO = [
   },
 ];
 
-// Coding hours this week. Filled in by hand for now — later from WakaTime.
-const STATS = [
-  { label: "JavaScript", hours: 8 },
-  { label: "Kotlin", hours: 3 },
-  { label: "C#", hours: 1 },
-];
-
 const CAREER = [
   {
-    role: "Full Stack Projects",
-    place: "Self-learning",
-    year: "NOW",
-    desc: "Building my own web apps with JavaScript, Node.js and Supabase, shipping them on Vercel and keeping everything on GitHub.",
+    role: "First lines of code",
+    place: "The beginning",
+    year: "START",
+    desc: "Got curious about how websites and apps actually work — opened a code editor and never stopped.",
   },
   {
     role: "PSI Student",
@@ -50,22 +41,21 @@ const CAREER = [
     desc: "Computer Systems Programming course at Escola de Comércio e Serviços do Oeste — C#, Windows Forms, databases, web and mobile development.",
   },
   {
-    role: "First lines of code",
-    place: "The beginning",
-    year: "START",
-    desc: "Got curious about how websites and apps actually work — opened a code editor and never stopped.",
+    role: "Full Stack Projects",
+    place: "Self-learning",
+    year: "NOW",
+    desc: "Building my own web apps with JavaScript, Node.js and Supabase, shipping them on Vercel and keeping everything on GitHub.",
   },
 ];
 
-// `image` shows a screenshot, otherwise the emoji on the gradient cover.
-// `status` adds a small badge (e.g. "In progress", "Private repo").
+// No `image` → the emoji is shown on the `cover` gradient. `status` adds a badge.
 const PROJECTS = [
   {
     title: "Sunny",
     category: "Solar panel sizing platform",
     stack: "JavaScript, Supabase, PostgreSQL, Vercel",
     image: "img/sunny.jpg",
-    cover: "linear-gradient(135deg, #5a3a0a, #0e5a6e)",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
     github: "https://github.com/VK675/Sunny",
     demo: "https://sunny06.vercel.app/",
   },
@@ -74,7 +64,7 @@ const PROJECTS = [
     category: "Android app for my school",
     stack: "Kotlin, Firebase, Android",
     emoji: "📱",
-    cover: "linear-gradient(135deg, #3b1a6b, #0e5a6e)",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
     status: "Private repo",
     github: "",
     demo: "",
@@ -84,7 +74,7 @@ const PROJECTS = [
     category: "Interactive 3D globe of the EU — facts, culture & quiz",
     stack: "React, Three.js, WebGL",
     image: "img/europe-explorer.png",
-    cover: "linear-gradient(135deg, #10306b, #1a1440)",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
     github: "https://github.com/VK675/EUProject",
     demo: "https://euproject67.netlify.app/",
   },
@@ -94,7 +84,7 @@ const PROJECTS = [
     stack: "C#, WinForms, SQLite",
     image: "img/yummly.jpg",
     emoji: "🍜",
-    cover: "linear-gradient(135deg, #6b3a10, #4a1a5e)",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
     status: "In progress",
     github: "https://github.com/VK675/Yummly",
     demo: "",
@@ -104,16 +94,24 @@ const PROJECTS = [
     category: "English learning app for kids",
     stack: "Electron, JavaScript, Ollama",
     image: "img/Pipilabu.png",
-    cover: "linear-gradient(135deg, #6b3a10, #4a1a5e)",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
     status: "In progress",
     github: "https://github.com/VK675/PiPiLaBu",
     demo: "",
   },
+  {
+    title: "Tutoria_Trip",
+    category: "School trip website with a shared photo album",
+    stack: "Html, Css, JavaScript, Firebase",
+    image: "img/PortoTrip.png",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
+    status: "Done",
+    github: "https://github.com/VK675/Tutoria_Project",
+    demo: "https://tutoriaproject.vercel.app",
+  },
 ];
 
-// Icons: devicon (https://devicon.dev), self-hosted in /icons — `icon` is the file name without .svg.
-// `invert: true` for black logos so they show on the dark background.
-// The pyramid is built bottom-up: tiers[0] is the base.
+// `icon` = file name in /icons (from devicon.dev). `invert` for black logos. First tier is the base.
 const PYRAMID = [
   { tier: "Languages & tools", items: [
     { name: "HTML", icon: "html5-original", url: "https://developer.mozilla.org/docs/Web/HTML", color: "#e34f26" },
@@ -140,7 +138,6 @@ const PYRAMID = [
     { name: "Vercel", icon: "vercel-original", url: "https://vercel.com", color: "#eae5ec", invert: true },
   ] },
 ];
-const ICON_DIR = "icons/";
 
 const SOFT_SKILLS = [
   {
@@ -163,7 +160,7 @@ const SOFT_SKILLS = [
   },
 ];
 
-// level: 0–100, drives the bar width.
+// level: 0–100 (bar width)
 const LANGUAGES = [
   { name: "Ukrainian", code: "UK", level: 100, label: "Native" },
   { name: "Russian", code: "RU", level: 100, label: "Native" },
@@ -172,9 +169,6 @@ const LANGUAGES = [
   { name: "English", code: "EN", level: 60, label: "B1" },
 ];
 
-// ============================================================
-//  RENDER
-// ============================================================
 const ICONS = {
   github: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5"/></svg>',
   whatsapp: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.35-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 9.43 9.44c0 5.2-4.24 9.43-9.44 9.43m8.03-17.46A11.3 11.3 0 0 0 12.05.7C5.8.7.7 5.8.7 12.05c0 2 .52 3.95 1.52 5.66L.6 23.3l5.72-1.5a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></svg>',
@@ -194,14 +188,13 @@ $("#year").textContent = new Date().getFullYear();
 $$("[data-email]").forEach((a) => { a.href = `mailto:${CONFIG.email}`; a.textContent = CONFIG.email; });
 $$("[data-github]").forEach((a) => { a.href = CONFIG.github; });
 
-
 $("#socials").innerHTML = SOCIALS.map((s) =>
   `<a href="${s.href}" target="_blank" rel="noopener" aria-label="${s.label}">${ICONS[s.key]}</a>`).join("");
 $("#contact-socials").innerHTML = SOCIALS.filter((s) => s.key !== "email").map((s) =>
   `<a href="${s.href}" target="_blank" rel="noopener">${s.label} ↗</a>`).join("");
 
 $("#what-boxes").innerHTML = WHAT_I_DO.map((w, i) => `
-  <div class="what-box${i === 0 ? " active" : ""}">
+  <div class="what-box glass${i === 0 ? " active" : ""}">
     <div class="what-head">
       <div><h3>${w.title}</h3><h4>${w.sub}</h4></div>
       <span class="what-arrow">↓</span>
@@ -210,14 +203,6 @@ $("#what-boxes").innerHTML = WHAT_I_DO.map((w, i) => `
       <p>${w.desc}</p>
       <div class="what-tags">${w.tags.map((t) => `<span>${t}</span>`).join("")}</div>
     </div></div>
-  </div>`).join("");
-
-const maxHours = Math.max(...STATS.map((s) => s.hours));
-$("#stats-list").innerHTML = STATS.map((s) => `
-  <div class="stat-row">
-    <span class="stat-label">${s.label}</span>
-    <div class="stat-bar"><span style="width: ${(s.hours / maxHours) * 100}%"></span></div>
-    <span class="stat-hours">${s.hours}h</span>
   </div>`).join("");
 
 $("#career-list").innerHTML = CAREER.map((c) => `
@@ -230,7 +215,7 @@ $("#career-list").innerHTML = CAREER.map((c) => `
   </div>`).join("");
 
 $("#work-track").innerHTML = PROJECTS.map((p, i) => `
-  <article class="work-box">
+  <article class="work-box glass">
     <div class="work-info">
       <span class="work-num">${String(i + 1).padStart(2, "0")}</span>
       <div><h3>${p.title}</h3><h5>${p.category}</h5>${p.status ? `<span class="work-badge">${p.status}</span>` : ""}</div>
@@ -247,14 +232,13 @@ $("#work-track").innerHTML = PROJECTS.map((p, i) => `
       </div>
     </div>
   </article>`).join("") + `
-  <article class="work-box work-cta">
+  <article class="work-box glass work-cta">
     <h3>Want to see<br>more?</h3>
     <p>Explore all of my projects and experiments.</p>
     <a class="pill-btn" href="${CONFIG.github}" target="_blank" rel="noopener">See all on GitHub →</a>
   </article>`;
 
-// Skills: pyramid (top tier rendered first)
-const icon = (t) => `<img src="${ICON_DIR}${t.icon}.svg" alt="" width="34" height="34" loading="lazy"${t.invert ? ' class="invert"' : ""}>`;
+const icon = (t) => `<img src="icons/${t.icon}.svg" alt="" width="34" height="34" loading="lazy"${t.invert ? ' class="invert"' : ""}>`;
 let delay = 0;
 $("#pyramid").innerHTML = [...PYRAMID].reverse().map((row) => `
   <div class="pyr-row">
@@ -265,7 +249,7 @@ $("#pyramid").innerHTML = [...PYRAMID].reverse().map((row) => `
   </div>`).join("");
 
 $("#soft-grid").innerHTML = SOFT_SKILLS.map((k) => `
-  <article class="soft-card">
+  <article class="soft-card glass">
     <span class="soft-emoji">${k.emoji}</span>
     <h3>${k.title}</h3>
     <p>${k.desc}</p>
@@ -273,7 +257,7 @@ $("#soft-grid").innerHTML = SOFT_SKILLS.map((k) => `
   </article>`).join("");
 
 $("#lang-list").innerHTML = LANGUAGES.map((l) => `
-  <div class="lang-row">
+  <div class="lang-row glass">
     <span class="lang-code">${l.code}</span>
     <div class="lang-main">
       <div class="lang-head"><b>${l.name}</b><span>${l.label}</span></div>
@@ -281,7 +265,6 @@ $("#lang-list").innerHTML = LANGUAGES.map((l) => `
     </div>
   </div>`).join("");
 
-// Skills tabs
 const tabs = $$(".skill-tabs [role=tab]");
 tabs.forEach((tab) => tab.addEventListener("click", () => {
   tabs.forEach((t) => {
@@ -294,14 +277,21 @@ tabs.forEach((tab) => tab.addEventListener("click", () => {
   });
 }));
 
-
-// ============================================================
-//  EFFECTS
-// ============================================================
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = matchMedia("(pointer: fine)").matches;
 
-// ---------- Split text into words ----------
+// Glass light follows the cursor
+if (finePointer && !reduceMotion) {
+  document.addEventListener("pointermove", (e) => {
+    const g = e.target.closest?.(".glass");
+    if (!g) return;
+    const r = g.getBoundingClientRect();
+    g.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    g.style.setProperty("--my", `${e.clientY - r.top}px`);
+  }, { passive: true });
+}
+
+// Split headings into words for the reveal animation
 $$(".split, .split-chars").forEach((el) => {
   const walk = (node) => {
     [...node.childNodes].forEach((child) => {
@@ -325,7 +315,6 @@ $$(".split, .split-chars").forEach((el) => {
   el.querySelectorAll(".w > i").forEach((w, i) => { w.style.transitionDelay = `${i * 40}ms`; });
 });
 
-// Reveal on scroll
 const io = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
     if (!e.isIntersecting) return;
@@ -337,41 +326,37 @@ $$(".split, .split-chars, .skill-panel:not([hidden])").forEach((el) => {
   if (!el.closest(".landing")) io.observe(el);
 });
 
-// ---------- What I do accordion ----------
 $$(".what-box").forEach((box) => {
   box.addEventListener("click", () => {
     $$(".what-box").forEach((b) => b.classList.toggle("active", b === box && !b.classList.contains("active")));
   });
 });
 
-// ---------- Scroll-driven effects ----------
 const careerWrap = $(".career-wrap");
 const careerLine = $(".career-line");
 const work = $("#work");
 const workTrack = $("#work-track");
 const isDesktop = () => matchMedia("(min-width: 901px)").matches;
 
+const workDistance = () => Math.max(0, workTrack.scrollWidth - innerWidth * 0.9);
+
 function sizeWork() {
-  if (!isDesktop()) { work.style.height = ""; return; }
-  const extra = workTrack.scrollWidth - innerWidth + innerWidth * 0.1;
-  work.style.height = `${innerHeight + Math.max(0, extra)}px`;
+  work.style.height = isDesktop() ? `${innerHeight + workDistance()}px` : "";
 }
 
 function onScroll() {
   const vh = innerHeight;
 
-  // Career: glowing line grows
   const c = careerWrap.getBoundingClientRect();
   const cp = Math.min(1, Math.max(0, (vh * 0.6 - c.top) / c.height));
   careerLine.style.height = `${cp * (c.height + 40)}px`;
 
-  // Work: horizontal scroll
+  // vertical scroll moves the project track sideways
   if (isDesktop()) {
     const w = work.getBoundingClientRect();
     const max = work.offsetHeight - vh;
     const p = Math.min(1, Math.max(0, -w.top / max));
-    const dist = workTrack.scrollWidth - innerWidth + innerWidth * 0.1;
-    workTrack.style.transform = `translateX(${-p * Math.max(0, dist)}px)`;
+    workTrack.style.transform = `translateX(${-p * workDistance()}px)`;
   }
 }
 
@@ -381,10 +366,9 @@ addEventListener("load", () => { sizeWork(); onScroll(); });
 sizeWork();
 onScroll();
 
-// ---------- ID card tilt ----------
-(function idCard() {
-  const card = $("#id-card");
-  if (!finePointer || reduceMotion) return;
+// ID card tilt
+const card = $("#id-card");
+if (finePointer && !reduceMotion) {
   card.addEventListener("mousemove", (e) => {
     const r = card.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width;
@@ -398,4 +382,4 @@ onScroll();
     card.style.setProperty("--rx", "0deg");
     card.style.setProperty("--ry", "0deg");
   });
-})();
+}
