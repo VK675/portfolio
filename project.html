@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project — Valerii Kravchenko</title>
+  <meta name="theme-color" content="#f5f5f7" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- Same header as index.html, but links point back to the home page sections -->
+  <header class="header glass">
+    <a href="index.html" class="brand" aria-label="Valerii Kravchenko — home"><img src="logo.svg" alt="" width="40" height="40" /></a>
+    <a href="mailto:valeriikravchenko6@gmail.com" class="header-mail">valeriikravchenko6@gmail.com</a>
+    <nav>
+      <a href="index.html#skills" class="hover-link"><span data-text="SKILLS">SKILLS</span></a>
+      <a href="index.html#work" class="hover-link"><span data-text="WORK">WORK</span></a>
+      <a href="index.html#contact" class="hover-link"><span data-text="CONTACT">CONTACT</span></a>
+    </nav>
+  </header>
+
+  <!-- project.js fills this with the project from the address (?id=...) -->
+  <main id="project"></main>
+
+  <script src="projects.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>

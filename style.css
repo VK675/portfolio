@@ -511,3 +511,38 @@ a { color: inherit; text-decoration: none; }
   .lang-bar i { transform: none; }
 }
 
+
+/* Project page (project.html) */
+.project { padding: 140px 0 100px; display: flex; flex-direction: column; gap: 32px; }
+.project-back { align-self: flex-start; color: var(--muted); font-weight: 500; transition: color .25s; }
+.project-back:hover { color: var(--text); }
+.project-head h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1; font-weight: 600; letter-spacing: -.02em; }
+.project-category { color: var(--muted); font-size: 1.15rem; margin-top: 12px; }
+.project-image { border-radius: var(--radius); }
+.project-image .emoji { font-size: 7rem; }
+.project-body {
+  padding: 36px; border-radius: var(--radius);
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;
+}
+.project-desc { font-size: 1.1rem; max-width: 65ch; margin-bottom: 28px; }
+.project-label {
+  font-family: var(--mono); font-weight: 400; font-size: .78rem; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+}
+.project-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.project-tags li { padding: 6px 14px; border-radius: 20px; border: 1px solid var(--line); background: rgba(255, 255, 255, .6); font-size: .9rem; }
+.project-features { margin: 0 0 0 20px; display: grid; gap: 6px; }
+.project-tags + .project-label { margin-top: 28px; }
+.project-links { display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
+.project-btn {
+  display: inline-flex; justify-content: center; padding: 15px 30px; border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, .25); font-weight: 600; transition: background .25s, color .25s;
+}
+.project-btn:hover { background: var(--accent); color: var(--bg); }
+.project-missing { min-height: 100vh; justify-content: center; align-items: flex-start; }
+@media (max-width: 900px) {
+  .project { padding-top: 110px; gap: 24px; }
+  .project-body { flex-direction: column; padding: 24px; }
+  .project-links { width: 100%; }
+  .project-links a { justify-content: center; }
+}
