@@ -488,7 +488,6 @@ a { color: inherit; text-decoration: none; }
   .contact-flex { flex-direction: column; }
   .contact-credit { text-align: left; }
 }
-}
 @media (max-width: 640px) {
   .landing .id-wrap { transform: none; }
   .id-back { display: none; }
