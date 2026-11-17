@@ -102,7 +102,7 @@ const PROJECTS = [
   {
     title: "Tutoria_Trip",
     category: "School trip website with a shared photo album",
-    stack: "Html, Css, JavaScript, Firebase",
+    stack: "HTML, CSS, JavaScript, Firebase",
     image: "img/PortoTrip.png",
     cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
     status: "Done",
@@ -120,6 +120,26 @@ const PROJECTS = [
     demo: "",
     // Always points to the APK of the newest GitHub release, so the site needs no update per version.
     download: "https://github.com/VK675/LoRead/releases/latest/download/Folio.apk",
+  },
+  {
+    title: "EscoMusic",
+    category: "School website where every class shares its favourite music",
+    stack: "HTML, CSS, JavaScript, Firebase, YouTube API",
+    image: "img/escomusic.webp",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
+    status: "Done",
+    github: "", // repo is private
+    demo: "https://escomusic.vercel.app",
+  },
+  {
+    title: "SweetDreams",
+    category: "Website for a fictional company that sells sweets and desserts",
+    stack: "HTML, CSS, JavaScript, localStorage",
+    image: "img/sweetdreams.webp",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
+    status: "Done",
+    github: "https://github.com/VK675/SweetWorld",
+    demo: "https://sweetworld-six.vercel.app",
   },
 ];
 
