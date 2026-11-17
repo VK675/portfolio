@@ -164,6 +164,7 @@ $("#work-track").innerHTML = PROJECTS.map((p, i) => `
     <div class="work-image" style="--cover:${p.cover}">
       ${p.image ? `<img src="${p.image}" alt="${p.title} screenshot" loading="lazy">` : `<span class="emoji">${p.emoji}</span>`}
       <div class="work-links">
+        <a class="work-details" href="project.html?id=${p.id}">Details →</a>
         ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener">Code ↗</a>` : ""}
         ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener">Live ↗</a>` : ""}
         ${p.download ? `<a href="${p.download}" rel="noopener">Download APK ↓</a>` : ""}
