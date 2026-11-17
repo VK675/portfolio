@@ -109,6 +109,18 @@ const PROJECTS = [
     github: "https://github.com/VK675/Tutoria_Project",
     demo: "https://tutoriaproject.vercel.app",
   },
+  {
+    title: "Folio",
+    category: "Android book reader & audiobook player",
+    stack: "Kotlin, Jetpack Compose, Media3",
+    image: "img/folio.webp",
+    cover: "linear-gradient(135deg, #2c2c2e, #0a0a0a)",
+    status: "In progress",
+    github: "https://github.com/VK675/LoRead",
+    demo: "",
+    // Always points to the APK of the newest GitHub release, so the site needs no update per version.
+    download: "https://github.com/VK675/LoRead/releases/latest/download/Folio.apk",
+  },
 ];
 
 // `icon` = file name in /icons (from devicon.dev). `invert` for black logos. First tier is the base.
@@ -229,6 +241,7 @@ $("#work-track").innerHTML = PROJECTS.map((p, i) => `
       <div class="work-links">
         ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener">Code ↗</a>` : ""}
         ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener">Live ↗</a>` : ""}
+        ${p.download ? `<a href="${p.download}" rel="noopener">Download APK ↓</a>` : ""}
       </div>
     </div>
   </article>`).join("") + `
